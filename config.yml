@@ -1,0 +1,7 @@
+ServerPrefix: '&7[&3&lAwesomeEnchantCommands&7]&r'
+
+#Messages
+NoPermission: '&cNo permission.'
+ValueChanged: '&c%enchant% &elevel of &6%player% &ehas been set to &d%amount%'
+MaxValue: '&cMax level for &6%enchant% &cis &d%level%'
+NoPlayer: '&6%player% &cis not online.'

@@ -1,0 +1,11 @@
+name: AwesomeEnchantCommands
+main: com.emiv.awesomeenchantcommands.Main
+version: 1.0
+api-version: 1.16
+commands:
+  fortune:
+    aliases:
+    description: Fortune command
+  protection:
+    aliases:
+    description: Protection command
