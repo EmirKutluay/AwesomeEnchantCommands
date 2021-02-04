@@ -3,22 +3,23 @@ package com.emiv.awesomeenchantcommands;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
-public class protectionPlayer implements Listener {
+public class featherFallingPlayer implements Listener {
 
 	Main plugin;
-	public protectionPlayer(Main instance) {
+	public featherFallingPlayer(Main instance) {
 		plugin = instance;
 	}
 	
 	@EventHandler
-	public void onHit(EntityDamageByEntityEvent e) {
+	public void onFall(EntityDamageEvent e) {
 		if (e.getEntity() instanceof Player) {
 			Player p = (Player) e.getEntity();
-			if (plugin.protectionPlayers.containsKey(p.getName())) {
+			if (e.getCause() == DamageCause.FALL) {
 				double dmg = e.getDamage();
-				double value = plugin.protectionPlayers.get(p.getName()) * 0.04;
+				double value = plugin.featherFallingPlayers.get(p.getName()) * 0.1;
 				if (value > 1) {
 					value = 1;
 				}

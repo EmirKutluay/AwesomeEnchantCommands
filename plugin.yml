@@ -3,9 +3,24 @@ main: com.emiv.awesomeenchantcommands.Main
 version: 1.0
 api-version: 1.16
 commands:
+  awesomeenchantcommands:
+    aliases: [aec, awesomeec]
+    description: Main command for AwesomeEnchantCommands
   fortune:
     aliases:
     description: Fortune command
   protection:
     aliases:
     description: Protection command
+  thorns:
+    aliases:
+    description: Thorns command
+  featherfalling:
+    aliases:
+    description: Feather Falling command
+  knockback:
+    aliases:
+    description: Knockback command
+  looting:
+    aliases:
+    description: Looting command

@@ -10,15 +10,28 @@ public class Main extends JavaPlugin{
 	
 	public HashMap<String, Integer> fortunePlayers = new HashMap<String, Integer>();
 	public HashMap<String, Integer> protectionPlayers = new HashMap<String, Integer>();
+	public HashMap<String, Integer> thornsPlayers = new HashMap<String, Integer>();
+	public HashMap<String, Integer> featherFallingPlayers = new HashMap<String, Integer>();
+	public HashMap<String, Integer> knockbackPlayers = new HashMap<String, Integer>();
+	public HashMap<String, Integer> lootingPlayers = new HashMap<String, Integer>();
 	@Override
 	public void onEnable() {
 		this.saveDefaultConfig();
 		
 		Bukkit.getPluginManager().registerEvents(new fortunePlayer(this), this);
+		Bukkit.getPluginManager().registerEvents(new thornsPlayer(this), this);
 		Bukkit.getPluginManager().registerEvents(new protectionPlayer(this), this);
-		
+		Bukkit.getPluginManager().registerEvents(new featherFallingPlayer(this), this);
+		Bukkit.getPluginManager().registerEvents(new knockbackPlayer(this), this);
+		Bukkit.getPluginManager().registerEvents(new lootingPlayers(this), this);
+
 		getCommand("fortune").setExecutor(new fortuneCommand(this));
 		getCommand("protection").setExecutor(new protectionCommand(this));
+		getCommand("thorns").setExecutor(new thornsCommand(this));
+		getCommand("featherfalling").setExecutor(new featherFallingCommand(this));
+		getCommand("knockback").setExecutor(new knockbackCommand(this));
+		getCommand("looting").setExecutor(new lootingCommand(this));
+		getCommand("awesomeenchantcommands").setExecutor(new aecCommand(this));
 	}
 	
 }
