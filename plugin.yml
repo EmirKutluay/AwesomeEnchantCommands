@@ -1,6 +1,6 @@
 name: AwesomeEnchantCommands
 main: com.emiv.awesomeenchantcommands.Main
-version: 1.1
+version: 1.2
 api-version: 1.16
 commands:
   awesomeenchantcommands:
@@ -27,3 +27,6 @@ commands:
   infinity:
     aliases:
     description: Infinity command
+  sharpness:
+    aliases:
+    description: Sharpness command

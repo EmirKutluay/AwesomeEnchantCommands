@@ -9,10 +9,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityShootBowEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class infinityPlayers implements Listener {
+public class infinityPlayer implements Listener {
 
 	Main plugin;
-	public infinityPlayers(Main instance) {
+	public infinityPlayer(Main instance) {
 		plugin = instance;
 	}
 	

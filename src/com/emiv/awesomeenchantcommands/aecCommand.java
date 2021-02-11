@@ -29,7 +29,7 @@ public class aecCommand implements CommandExecutor {
 		String fifthLine = "&6/aec reload &8- &eReloads the config";
 		String sixthLine = "&7---------------------------------------";
 		String all = firstLine + "\n" + secondLine + "\n" + thirdLine + "\n" + fourthLine + "\n" + fifthLine + "\n" + sixthLine;
-		List<String> enchants = Arrays.asList("fortune", "protection", "thorns", "featherfalling", "knockback", "looting", "infinity");
+		List<String> enchants = Arrays.asList("fortune", "protection", "thorns", "featherfalling", "knockback", "looting", "infinity", "sharpness");
 		HashMap<String, HashMap<String, Integer>> enchantLists = new HashMap<String, HashMap<String, Integer>>();
 		enchantLists.put("fortune", plugin.fortunePlayers);
 		enchantLists.put("protection", plugin.protectionPlayers);
@@ -38,6 +38,7 @@ public class aecCommand implements CommandExecutor {
 		enchantLists.put("knockback", plugin.knockbackPlayers);
 		enchantLists.put("looting", plugin.lootingPlayers);
 		enchantLists.put("infinity", plugin.infinityPlayers);
+		enchantLists.put("sharpness", plugin.sharpnessPlayers);
 		if (sender instanceof Player) {
 			Player p = (Player) sender;
 			if (args.length == 0) {
